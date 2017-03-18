@@ -20,12 +20,12 @@ import smach_ros
 
 from qt_gui.plugin import Plugin
 from python_qt_binding import loadUi
-from python_qt_binding.QtGui import QWidget
 from python_qt_binding.QtGui import QPalette,QPen
-from python_qt_binding.QtGui import QStyle,QApplication,QMouseEvent
+from python_qt_binding.QtGui import QMouseEvent
 from python_qt_binding.QtCore import Qt
 from python_qt_binding.QtCore import Signal,Slot
-from python_qt_binding.QtGui import QWidget,QPalette,QColor,QStandardItemModel,QItemDelegate,QStyleOptionButton,QStandardItem,QIcon
+from python_qt_binding.QtWidgets import QWidget, QStyle, QApplication, QItemDelegate, QStyleOptionButton,QMainWindow
+from python_qt_binding.QtGui import QPalette,QColor,QStandardItemModel,QStandardItem,QIcon
 from python_qt_binding.QtCore import Qt,QTimer,Signal,QRect,QSize,QEvent
 from rqt_py_common.extended_combo_box import ExtendedComboBox
 from qt_gui_py_common.worker_thread import WorkerThread
@@ -75,10 +75,10 @@ def hex2t(color_str):
 
 class ContainerNode():
     """
-    This class represents a given container in a running SMACH system. 
+    This class represents a given container in a running SMACH system.
     Its primary use is to generate dotcode for a SMACH container. It has
     methods for responding to structure and status messages from a SMACH
-    introspection server, as well as methods for updating the styles of a 
+    introspection server, as well as methods for updating the styles of a
     graph once it's been drawn.
     """
     def __init__(self, server_name, msg):
