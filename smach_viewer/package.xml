@@ -23,9 +23,13 @@
 
   <build_depend>rostest</build_depend>
 
-  <exec_depend>smach_ros</exec_depend>
   <exec_depend>xdot</exec_depend>
+  <exec_depend>smach_ros</exec_depend>
   <exec_depend>smach_msgs</exec_depend>
+
+  <build_export_depend>xdot</build_export_depend>
+  <build_export_depend>smach_ros</build_export_depend>
+  <build_export_depend>smach_msgs</build_export_depend>
 
   <export>
 

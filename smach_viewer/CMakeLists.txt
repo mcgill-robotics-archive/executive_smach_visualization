@@ -6,7 +6,7 @@ find_package(catkin REQUIRED COMPONENTS rostest)
 
 catkin_package(
   CATKIN_DEPENDS smach_ros xdot smach_msgs
-  )
+)
 
 # Install targets
 install(PROGRAMS scripts/smach_viewer.py
